@@ -66,7 +66,7 @@ const practiceAreas = [
 export default function PracticeAreasPage() {
   return (
     <div className="flex flex-col min-h-screen pt-24 bg-white">
-      <Navbar />
+      <Navbar variant="solid" />
       <main className="flex-grow">
         {/* Banner */}
         <section className="bg-primary py-24 relative overflow-hidden">

@@ -44,7 +44,7 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
         <Link href="/" className="flex flex-col group">
           <span className={cn(
             "text-xl md:text-2xl font-serif font-bold tracking-tight transition-colors group-hover:text-accent",
-            isScrolled ? "text-primary" : "text-primary"
+            isScrolled ? "text-primary" : "text-white"
           )}>
             Daniel Gemechu
           </span>

@@ -29,10 +29,10 @@ export default function Hero() {
         >
           <div className="space-y-6">
             <motion.span
-               initial={{ opacity: 0, y: 10 }}
-               animate={{ opacity: 1, y: 0 }}
-               transition={{ delay: 0.2 }}
-               className="inline-block text-accent uppercase tracking-widest text-[10px] font-bold bg-accent/10 px-4 py-2 rounded-full border border-accent/20 border-l-4"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-block text-accent uppercase tracking-widest text-[10px] font-bold bg-accent/10 px-4 py-2 rounded-full border border-accent/20 border-l-4"
             >
               Licensed Federal Court Advocate
             </motion.span>
@@ -61,9 +61,9 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-12 border-t border-white/10">
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-12 border-t border-white/10 mb-10">
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
-              <p className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-accent">7+</p>
+              <p className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-accent">20+</p>
               <p className="text-[10px] sm:text-xs uppercase tracking-wider text-gray-400 mt-1 font-bold">Years Experience</p>
             </div>
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left border-t border-white/5 sm:border-0 pt-4 sm:pt-0">
@@ -78,21 +78,21 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-           initial={{ opacity: 0, scale: 0.95 }}
-           animate={{ opacity: 1, scale: 1 }}
-           transition={{ duration: 1, delay: 0.3 }}
-           className="relative hidden lg:block"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="relative hidden lg:block"
         >
           <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border-2 border-white/5 ring-1 ring-white/10 group">
-             <Image
-                src="/images/daniel-portrait.png"
-                alt="Daniel Gemechu portrait"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-             />
-             <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <Image
+              src="/images/daniel-portrait.png"
+              alt="Daniel Gemechu portrait"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
-          
+
           {/* Accent decoration */}
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 blur-3xl rounded-full" />
           <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-primary-light/40 blur-3xl rounded-full" />
