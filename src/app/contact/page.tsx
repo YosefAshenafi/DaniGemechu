@@ -27,7 +27,11 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
+import { useState } from "react";
+
 export default function ContactPage() {
+   const [submitStatus, setSubmitStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
    const {
       register,
       handleSubmit,
@@ -38,10 +42,27 @@ export default function ContactPage() {
    });
 
    const onSubmit = async (data: ContactFormData) => {
-      // Integrate email sending here in real use case
-      console.log(data);
-      alert("Thank you! Your message has been sent successfully.");
-      reset();
+      setSubmitStatus('loading');
+      try {
+         const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+         });
+
+         if (response.ok) {
+            setSubmitStatus('success');
+            reset();
+            setTimeout(() => setSubmitStatus('idle'), 5000); // Reset status after 5s
+         } else {
+            setSubmitStatus('error');
+         }
+      } catch (error) {
+         console.error('Submission error:', error);
+         setSubmitStatus('error');
+      }
    };
 
    return (
@@ -154,13 +175,31 @@ export default function ContactPage() {
                            {errors.message && <p className="text-red-500 text-xs font-bold mt-1 ml-1">{errors.message.message}</p>}
                         </div>
 
+                        {submitStatus === 'success' && (
+                           <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-2xl animate-in fade-in slide-in-from-top-2">
+                              <p className="text-green-800 font-bold flex items-center gap-2">
+                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                                 Message sent successfully! I'll contact you soon.
+                              </p>
+                           </div>
+                        )}
+
+                        {submitStatus === 'error' && (
+                           <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-2xl animate-in fade-in slide-in-from-top-2">
+                              <p className="text-red-800 font-bold flex items-center gap-2">
+                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                 Something went wrong. Please try again or call directly.
+                              </p>
+                           </div>
+                        )}
+
                         <button
                            type="submit"
-                           disabled={isSubmitting}
+                           disabled={isSubmitting || submitStatus === 'loading'}
                            className="w-full bg-primary text-white py-6 rounded-2xl font-bold text-xl hover:bg-primary-light transition-all shadow-xl hover:shadow-primary/20 flex items-center justify-center gap-3 disabled:opacity-50"
                         >
-                           {isSubmitting ? "Sending..." : "Send Message"}
-                           <Send size={20} />
+                           {submitStatus === 'loading' ? "Sending..." : "Send Message"}
+                           <Send size={20} className={submitStatus === 'loading' ? 'animate-pulse' : ''} />
                         </button>
                      </form>
                   </div>
