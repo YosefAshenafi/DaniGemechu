@@ -78,7 +78,7 @@ export default function ContactPage() {
                                  <info.icon size={22} />
                               </div>
                               <h4 className="text-lg font-bold text-primary mb-2 font-serif">{info.title}</h4>
-                              <p className="text-primary-light font-bold text-sm mb-1">{info.content}</p>
+                              <p className="text-primary-light font-bold text-xs mb-1">{info.content}</p>
                               <p className="text-gray-400 text-xs font-medium uppercase tracking-widest">{info.sub}</p>
                            </div>
                         ))}

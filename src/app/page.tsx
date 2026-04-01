@@ -32,7 +32,7 @@ const mainPracticeAreas = [
 const reasonsToChoose = [
   {
     icon: Award,
-    title: "7+ Years Experience",
+    title: "20+ Years Experience",
     description: "Proven track record in high-stakes legal matters and court representation."
   },
   {
@@ -141,9 +141,13 @@ export default function Home() {
                 </Link>
                 <div className="flex items-center gap-4 text-primary font-bold">
                   <div className="flex -space-x-4">
-                    {[1, 2, 3].map(i => (
+                    {[
+                      "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=100&h=100&fit=crop",
+                      "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=100&h=100&fit=crop",
+                      "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=100&h=100&fit=crop"
+                    ].map((img, i) => (
                       <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden relative">
-                        <Image src={`/images/hero-bg.png`} alt="Viewer" fill className="object-cover" />
+                        <Image src={img} alt="Viewer" fill className="object-cover" unoptimized />
                       </div>
                     ))}
                   </div>
