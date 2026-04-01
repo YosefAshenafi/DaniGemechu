@@ -7,7 +7,7 @@ import { ChevronRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-primary">
+    <section className="relative min-h-[90vh] flex items-center pt-28 overflow-hidden bg-primary">
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -61,17 +61,17 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-12 pt-12 border-t border-white/10">
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-12 border-t border-white/10">
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
-              <p className="text-3xl md:text-5xl font-serif font-bold text-accent">7+</p>
+              <p className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-accent">7+</p>
               <p className="text-[10px] sm:text-xs uppercase tracking-wider text-gray-400 mt-1 font-bold">Years Experience</p>
             </div>
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left border-t border-white/5 sm:border-0 pt-4 sm:pt-0">
-              <p className="text-3xl md:text-5xl font-serif font-bold text-accent">500+</p>
+              <p className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-accent">500+</p>
               <p className="text-[10px] sm:text-xs uppercase tracking-wider text-gray-400 mt-1 font-bold">Cases Handled</p>
             </div>
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left border-t border-white/5 sm:border-0 pt-4 sm:pt-0">
-              <p className="text-3xl md:text-5xl font-serif font-bold text-accent">100%</p>
+              <p className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-accent">100%</p>
               <p className="text-[10px] sm:text-xs uppercase tracking-wider text-gray-400 mt-1 font-bold">Client Dedication</p>
             </div>
           </div>

@@ -5,6 +5,10 @@ import Link from "next/link";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+interface NavbarProps {
+  variant?: "transparent" | "solid";
+}
+
 const NavLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -13,7 +17,7 @@ const NavLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ variant = "transparent" }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -25,11 +29,13 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const isSolid = variant === "solid" || (variant === "transparent" && isScrolled);
+
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
+        isSolid || isScrolled
           ? "bg-white/80 backdrop-blur-md shadow-sm py-3"
           : "bg-transparent py-5"
       )}

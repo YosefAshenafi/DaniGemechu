@@ -50,7 +50,7 @@ const reasonsToChoose = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
+      <Navbar variant="solid" />
       <main className="flex-grow">
         <Hero />
 
@@ -81,8 +81,8 @@ export default function Home() {
                 <div className="aspect-square relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white shadow-primary/20">
                     <Image src="/images/hero-bg.png" alt="Legal Office" fill className="object-cover" />
                     <div className="absolute inset-0 bg-primary/40 flex items-center justify-center">
-                        <div className="bg-white p-10 rounded-2xl shadow-xl max-w-xs text-center border-t-4 border-accent">
-                          <p className="text-3xl font-serif font-bold text-primary mb-2">98%</p>
+                        <div className="bg-white p-6 sm:p-10 rounded-2xl shadow-xl max-w-xs text-center border-t-4 border-accent">
+                          <p className="text-2xl sm:text-3xl font-serif font-bold text-primary mb-2">98%</p>
                           <p className="text-gray-500 text-sm font-medium">Success Rate in Negotiated Settlements</p>
                         </div>
                     </div>
