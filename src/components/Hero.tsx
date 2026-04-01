@@ -16,6 +16,7 @@ export default function Hero() {
           fill
           className="object-cover opacity-30 scale-110"
           priority
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-transparent backdrop-blur-[2px]" />
       </div>
@@ -88,6 +89,7 @@ export default function Hero() {
               src="/images/daniel-portrait.png"
               alt="Daniel Gemechu portrait"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

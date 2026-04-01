@@ -36,7 +36,7 @@ export default function Navbar({ variant = "solid" }: NavbarProps) {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-sm py-3"
+        "fixed top-0 left-0 right-0 z-50 bg-white shadow-sm py-3"
       )}
     >
       <div className="container mx-auto px-6 flex justify-between items-center transition-all">
@@ -89,36 +89,34 @@ export default function Navbar({ variant = "solid" }: NavbarProps) {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="md:hidden fixed inset-0 top-[70px] bg-white z-40 flex flex-col p-8 space-y-6 animate-in slide-in-from-right-full duration-300"
+          className="md:hidden fixed inset-0 top-[60px] bg-white z-40 overflow-y-auto"
         >
-          {NavLinks.map((link, idx) => (
+          {NavLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
               className={cn(
-                "text-2xl font-serif font-bold transition-colors border-b border-gray-50 pb-4",
-                pathname === link.href ? "text-accent" : "text-primary hover:text-accent"
+                "block py-3 px-6 text-sm font-medium transition-colors border-b border-gray-100",
+                pathname === link.href ? "text-accent bg-accent/5" : "text-primary"
               )}
-              style={{ animationDelay: `${idx * 50}ms` }}
             >
               {link.name}
             </Link>
           ))}
-          <div className="pt-8">
+          
+          <div className="border-t border-gray-200 mt-2 bg-gray-50">
             <Link
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="w-full bg-primary text-white px-6 py-4 rounded-2xl text-center font-bold shadow-xl flex items-center justify-center gap-3 text-lg"
+              className="block w-full bg-primary text-white py-3 text-center text-sm font-semibold"
             >
               Book Consultation
             </Link>
           </div>
-
-          <div className="mt-auto pt-10 border-t border-gray-100 space-y-4">
-            <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">Connect Directly</p>
-            <p className="text-lg font-bold text-primary">+251 (0) 911 413 283</p>
-            <p className="text-sm text-gray-500 font-medium">danielgemechulawoffice@gmail.com</p>
+          
+          <div className="py-3 px-6 border-t border-gray-100 bg-white">
+            <p className="text-sm font-bold text-primary">+251 (0) 911 413 283</p>
           </div>
         </div>
       )}

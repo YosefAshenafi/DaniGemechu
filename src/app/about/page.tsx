@@ -52,7 +52,7 @@ export default function AboutPage() {
           <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
              <div className="relative">
                 <div className="aspect-[4/5] relative rounded-[3rem] overflow-hidden shadow-2xl border-2 border-white shadow-primary/20">
-                    <Image src="/images/daniel-portrait.png" alt="Daniel Gemechu" fill className="object-cover" />
+                    <Image src="/images/daniel-portrait.png" alt="Daniel Gemechu" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                 </div>
                  <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-accent/20 blur-3xl rounded-full" />
                  <div className="absolute top-10 -left-10 w-64 h-64 bg-primary/10 blur-3xl rounded-full" />
