@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -20,6 +21,7 @@ const NavLinks = [
 export default function Navbar({ variant = "solid" }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,7 +62,7 @@ export default function Navbar({ variant = "solid" }: NavbarProps) {
               href={link.href}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-accent",
-                "text-primary-light"
+                pathname === link.href ? "text-accent" : "text-primary-light"
               )}
             >
               {link.name}
@@ -94,7 +96,10 @@ export default function Navbar({ variant = "solid" }: NavbarProps) {
               key={link.name}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-2xl font-serif font-bold text-primary hover:text-accent transition-colors border-b border-gray-50 pb-4"
+              className={cn(
+                "text-2xl font-serif font-bold transition-colors border-b border-gray-50 pb-4",
+                pathname === link.href ? "text-accent" : "text-primary hover:text-accent"
+              )}
               style={{ animationDelay: `${idx * 50}ms` }}
             >
               {link.name}
