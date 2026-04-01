@@ -21,7 +21,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-gray-300 text-sm leading-relaxed">
-            Providing expert legal counsel and representation in Addis Ababa, specializing in Construction and Real Estate Law with over 7 years of professional experience.
+            Providing expert legal counsel and representation in Addis Ababa, specializing in Construction and Real Estate Law with over 20 years of professional experience.
           </p>
           <div className="flex space-x-5 items-center">
             <Link href="https://web.facebook.com/profile.php?id=100066380541763" target="_blank">

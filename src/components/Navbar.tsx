@@ -112,8 +112,8 @@ export default function Navbar({ variant = "solid" }: NavbarProps) {
 
           <div className="mt-auto pt-10 border-t border-gray-100 space-y-4">
             <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">Connect Directly</p>
-            <p className="text-lg font-bold text-primary">+251 911 234 567</p>
-            <p className="text-sm text-gray-500 font-medium">daniel.gemechu@law.et</p>
+            <p className="text-lg font-bold text-primary">+251 (0) 911 413 283</p>
+            <p className="text-sm text-gray-500 font-medium">danielgemechulawoffice@gmail.com</p>
           </div>
         </div>
       )}

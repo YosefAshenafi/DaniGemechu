@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Daniel Gemechu | Federal Court Advocate In Addis Ababa",
-  description: "Licensed federal court advocate in Ethiopia with over 7 years of experience in construction, real estate, contract, and labour law.",
+  description: "Licensed federal court advocate in Ethiopia with over 20 years of experience in construction, real estate, contract, and labour law.",
   keywords: ["Lawyer in Addis Ababa", "Ethiopian attorney", "Construction Law Ethiopia", "Real Estate Law Ethiopia"],
 };
 

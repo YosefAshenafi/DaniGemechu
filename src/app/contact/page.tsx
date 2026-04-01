@@ -68,8 +68,8 @@ export default function ContactPage() {
 
                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                         {[
-                           { icon: Phone, title: "Phone & WhatsApp", content: "+251 (0) 911 234 567", sub: "Available 8:30 AM - 5:30 PM" },
-                           { icon: Mail, title: "Email Address", content: "daniel.gemechu@law.et", sub: "Replies within 24 hours" },
+                           { icon: Phone, title: "Phone & WhatsApp", content: "+251 (0) 911 413 283", sub: "Available 8:30 AM - 5:30 PM" },
+                           { icon: Mail, title: "Email Address", content: "danielgemechulawoffice@gmail.com", sub: "Replies within 24 hours" },
                            { icon: MapPin, title: "Office Location", content: "Bole Area, Addis Ababa", sub: "Near Friendship Mall" },
                            { icon: Clock, title: "Working Hours", content: "Mon - Sat", sub: "Closed on Sundays" }
                         ].map((info, idx) => (

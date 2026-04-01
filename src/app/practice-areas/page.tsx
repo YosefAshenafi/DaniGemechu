@@ -17,7 +17,7 @@ const practiceAreas = [
       "Delay and defect claims",
       "Regulatory compliance for projects"
     ],
-    why: "Over 7 years of specialized experience in large-scale Ethiopian infrastructure projects."
+    why: "Over 20 years of specialized experience in large-scale Ethiopian infrastructure projects."
   },
   {
     id: "real-estate",

@@ -257,7 +257,7 @@ export default function Home() {
                 Contact Now
               </Link>
               <Link
-                href="tel:+251911234567"
+                href="tel:+251911413283"
                 className="text-white border border-white/30 px-10 py-5 rounded-full font-semibold hover:border-accent hover:text-accent transition-all flex items-center gap-3 bg-white/5 backdrop-blur-sm"
               >
                 Call Me Directly

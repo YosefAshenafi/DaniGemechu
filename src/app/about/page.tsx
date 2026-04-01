@@ -64,7 +64,7 @@ export default function AboutPage() {
                       "My mission is to provide high-quality legal representation that combines strategic thinking with a deep understanding of Ethiopian law."
                    </p>
                    <p>
-                      Daniel Gemechu Werdofa is a licensed federal court advocate based in Addis Ababa, Ethiopia. With over 7 years of intensive experience, he has specialized in providing legal counsel and representation in construction law, real estate law, contract administration, and labour law.
+                      Daniel Gemechu Werdofa is a licensed federal court advocate based in Addis Ababa, Ethiopia. With over 20 years of intensive experience, he has specialized in providing legal counsel and representation in construction law, real estate law, contract administration, and labour law.
                    </p>
                    <p>
                       He holds an LL.M in Constitutional and Public Law from the prestigious Addis Ababa University, equipping him with the academic depth required to handle complex legal challenges for both individuals and multinational corporations.

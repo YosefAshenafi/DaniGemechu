@@ -25,7 +25,7 @@ export default function PrivacyPage() {
           </p>
           <h2 className="text-2xl font-serif font-bold text-primary">Contact Us</h2>
           <p>
-            If you have any questions regarding this Privacy Policy, please contact us at daniel.gemechu@law.et.
+            If you have any questions regarding this Privacy Policy, please contact us at danielgemechulawoffice@gmail.com.
           </p>
         </div>
       </main>
