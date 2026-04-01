@@ -17,7 +17,7 @@ const NavLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
-export default function Navbar({ variant = "transparent" }: NavbarProps) {
+export default function Navbar({ variant = "solid" }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -34,17 +34,13 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isSolid || isScrolled
-          ? "bg-white/80 backdrop-blur-md shadow-sm py-3"
-          : "bg-transparent py-5"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-sm py-3"
       )}
     >
       <div className="container mx-auto px-6 flex justify-between items-center transition-all">
         <Link href="/" className="flex flex-col group">
           <span className={cn(
-            "text-xl md:text-2xl font-serif font-bold tracking-tight transition-colors group-hover:text-accent",
-            isScrolled ? "text-primary" : "text-white"
+            "text-xl md:text-2xl font-serif font-bold tracking-tight transition-colors group-hover:text-accent text-primary",
           )}>
             Daniel Gemechu
           </span>
@@ -90,7 +86,7 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div 
+        <div
           className="md:hidden fixed inset-0 top-[70px] bg-white z-40 flex flex-col p-8 space-y-6 animate-in slide-in-from-right-full duration-300"
         >
           {NavLinks.map((link, idx) => (
@@ -113,11 +109,11 @@ export default function Navbar({ variant = "transparent" }: NavbarProps) {
               Book Consultation
             </Link>
           </div>
-          
+
           <div className="mt-auto pt-10 border-t border-gray-100 space-y-4">
-             <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">Connect Directly</p>
-             <p className="text-lg font-bold text-primary">+251 911 234 567</p>
-             <p className="text-sm text-gray-500 font-medium">daniel.gemechu@law.et</p>
+            <p className="text-sm font-bold text-gray-400 uppercase tracking-widest">Connect Directly</p>
+            <p className="text-lg font-bold text-primary">+251 911 234 567</p>
+            <p className="text-sm text-gray-500 font-medium">daniel.gemechu@law.et</p>
           </div>
         </div>
       )}
