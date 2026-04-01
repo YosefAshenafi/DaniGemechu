@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 import { Phone, Mail, MapPin, Send, MessageSquare, Clock } from "lucide-react";
 const FacebookIcon = () => (
    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
@@ -13,6 +14,9 @@ const LinkedinIcon = () => (
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("@/components/Map"), { ssr: false });
 
 const contactSchema = z.object({
    name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -163,20 +167,37 @@ export default function ContactPage() {
                </div>
             </section>
 
-            {/* Map Section Placeholder */}
-            <section className="h-[500px] w-full bg-muted relative">
-               <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-6">
-                     <div className="w-20 h-20 bg-white rounded-3xl shadow-xl flex items-center justify-center text-accent mx-auto">
-                        <MapPin size={36} />
+            {/* Map Section */}
+            <section className="py-0">
+               <div className="border-t border-gray-200" />
+               <div className="h-[600px] relative">
+                  <Map 
+                    center={[9.0167174, 38.8530993]} 
+                    label="Daniel Gemechu Law Office" 
+                  />
+                  
+                  {/* Info Overlay */}
+                  <div className="absolute top-10 left-10 z-[1000] bg-white p-8 rounded-3xl shadow-2xl border border-gray-100 max-w-xs hidden md:block group">
+                     <h3 className="text-2xl font-serif font-bold text-primary mb-4">Our Office</h3>
+                     <div className="space-y-4">
+                        <div className="flex items-start gap-3">
+                           <MapPin className="text-accent flex-shrink-0 mt-1" size={20} />
+                           <p className="text-sm font-medium text-gray-600 leading-relaxed">2V83+M57, CMC Area, <br />Near Civil Service University, Addis Ababa</p>
+                        </div>
+                        <div className="flex items-center gap-3">
+                           <Phone className="text-accent flex-shrink-0" size={18} />
+                           <p className="text-sm font-bold text-primary">+251 (0) 911 413 283</p>
+                        </div>
+                        <Link 
+                          href="https://maps.app.goo.gl/FS1WbieCtsN5iowdA" 
+                          target="_blank"
+                          className="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-light transition-all shadow-lg mt-4"
+                        >
+                          Open In Google Maps
+                        </Link>
                      </div>
-                     <h3 className="text-3xl font-serif font-bold text-primary">Office Location</h3>
-                     <p className="text-gray-500 font-bold max-w-xs mx-auto">Find us in the heart of Addis Ababa, Bole Area. Near Friendship International Hotel.</p>
-                     <button className="bg-accent text-primary px-10 py-4 rounded-full font-bold hover:bg-accent-light transition-all shadow-lg">Get Directions</button>
                   </div>
                </div>
-               {/* In real use case, embed a Google Maps iframe here */}
-               <div className="absolute inset-0 opacity-20 bg-primary/10 grayscale pointer-events-none" />
             </section>
          </main>
          <Footer />
