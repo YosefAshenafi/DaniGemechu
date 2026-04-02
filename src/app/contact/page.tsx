@@ -95,7 +95,7 @@ export default function ContactPage() {
                         {[
                            { icon: Phone, title: "Phone & WhatsApp", content: "+251 (0) 911 413 283", sub: "Available 8:30 AM - 5:30 PM" },
                            { icon: Mail, title: "Email Address", content: "danielgemechulawoffice@gmail.com", sub: "Replies within 24 hours" },
-                           { icon: MapPin, title: "Office Location", content: "Bole Area, Addis Ababa", sub: "CMC Area" },
+                           { icon: MapPin, title: "Office Location", content: "CMC Area, Addis Ababa", sub: "" },
                            { icon: Clock, title: "Working Hours", content: "Mon - Sat", sub: "Closed on Sundays" }
                         ].map((info, idx) => (
                            <div key={idx} className="group p-8 bg-muted rounded-3xl border border-muted-foreground/5 hover:bg-white hover:shadow-2xl transition-all">
