@@ -95,7 +95,7 @@ export default function ContactPage() {
                         {[
                            { icon: Phone, title: "Phone & WhatsApp", content: "+251 (0) 911 413 283", sub: "Available 8:30 AM - 5:30 PM" },
                            { icon: Mail, title: "Email Address", content: "danielgemechulawoffice@gmail.com", sub: "Replies within 24 hours" },
-                           { icon: MapPin, title: "Office Location", content: "Bole Area, Addis Ababa", sub: "Near Friendship Mall" },
+                           { icon: MapPin, title: "Office Location", content: "Bole Area, Addis Ababa", sub: "CMC Area" },
                            { icon: Clock, title: "Working Hours", content: "Mon - Sat", sub: "Closed on Sundays" }
                         ].map((info, idx) => (
                            <div key={idx} className="group p-8 bg-muted rounded-3xl border border-muted-foreground/5 hover:bg-white hover:shadow-2xl transition-all">
@@ -178,7 +178,7 @@ export default function ContactPage() {
                         {submitStatus === 'success' && (
                            <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-2xl animate-in fade-in slide-in-from-top-2">
                               <p className="text-green-800 font-bold flex items-center gap-2">
-                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
                                  Message sent successfully! I'll contact you soon.
                               </p>
                            </div>
@@ -187,7 +187,7 @@ export default function ContactPage() {
                         {submitStatus === 'error' && (
                            <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-2xl animate-in fade-in slide-in-from-top-2">
                               <p className="text-red-800 font-bold flex items-center gap-2">
-                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
                                  Something went wrong. Please try again or call directly.
                               </p>
                            </div>
@@ -210,29 +210,29 @@ export default function ContactPage() {
             <section className="py-0">
                <div className="border-t border-gray-200" />
                <div className="h-[600px] relative">
-                  <Map 
-                    center={[9.0167174, 38.8530993]} 
-                    label="Daniel Gemechu Law Office" 
+                  <Map
+                     center={[9.0167174, 38.8530993]}
+                     label="Daniel Gemechu Law Office"
                   />
-                  
+
                   {/* Info Overlay */}
                   <div className="absolute top-10 left-10 z-[1000] bg-white p-8 rounded-3xl shadow-2xl border border-gray-100 max-w-xs hidden md:block group">
                      <h3 className="text-2xl font-serif font-bold text-primary mb-4">Our Office</h3>
                      <div className="space-y-4">
                         <div className="flex items-start gap-3">
                            <MapPin className="text-accent flex-shrink-0 mt-1" size={20} />
-                           <p className="text-sm font-medium text-gray-600 leading-relaxed">2V83+M57, CMC Area, <br />Near Civil Service University, Addis Ababa</p>
+                           <p className="text-sm font-medium text-gray-600 leading-relaxed">2V83+M57, CMC Area, <br />Near CMC Compound, Addis Ababa</p>
                         </div>
                         <div className="flex items-center gap-3">
                            <Phone className="text-accent flex-shrink-0" size={18} />
                            <p className="text-sm font-bold text-primary">+251 (0) 911 413 283</p>
                         </div>
-                        <Link 
-                          href="https://maps.app.goo.gl/FS1WbieCtsN5iowdA" 
-                          target="_blank"
-                          className="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-light transition-all shadow-lg mt-4"
+                        <Link
+                           href="https://maps.app.goo.gl/FS1WbieCtsN5iowdA"
+                           target="_blank"
+                           className="w-full bg-primary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-light transition-all shadow-lg mt-4"
                         >
-                          Open In Google Maps
+                           Open In Google Maps
                         </Link>
                      </div>
                   </div>
