@@ -116,7 +116,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* TV Show / YouTube Section */}
+        {/* YouTube Section */}
         <section className="py-32 bg-white relative overflow-hidden">
           <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8">
@@ -125,9 +125,9 @@ export default function Home() {
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-red-600"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
                   Legal Education & Insights
                 </span>
-                <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary">"Higen Betegebar" <br /> (Law In Practice) TV Show</h2>
+                <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary">"Higen Betegebar" <br />Youtube Channel</h2>
                 <p className="text-gray-600 text-lg leading-relaxed max-w-xl">
-                  Daniel Gemechu hosts a specialized TV show focused on legal literacy and Ethiopian law practice. Watch educational episodes and gain expert insights into construction, real estate, and civil law.
+                  Daniel Gemechu hosts a specialized TV show/ Youtube Channel focused on legal literacy and Ethiopian law practice. Watch educational episodes and gain expert insights into construction, real estate, and civil law.
                 </p>
               </div>
 
@@ -160,7 +160,7 @@ export default function Home() {
               target="_blank">
               <div className="relative group cursor-pointer">
                 <div className="aspect-video relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-muted ring-1 ring-primary/5">
-                  <Image src="/images/ytube.png" alt="TV Show Preview" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <Image src="/images/ytube.png" alt="Youtube channel Show Preview" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-primary/20 flex items-center justify-center group-hover:bg-primary/40 transition-all">
                     <div className="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform">
                       <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
