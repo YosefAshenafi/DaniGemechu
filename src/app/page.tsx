@@ -80,7 +80,7 @@ export default function Home() {
             <div className="relative order-2 lg:order-1">
               <div className="aspect-square relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white shadow-primary/20">
                 <Image src="/images/hero-bg.png" alt="Legal Office" fill className="object-cover" />
-                <div className="absolute inset-0 bg-primary/40 flex items-center justify-center">
+                <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
 
                 </div>
               </div>
